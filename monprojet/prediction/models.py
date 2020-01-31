@@ -1,0 +1,45 @@
+from django.db import models
+
+# Create your models here.
+
+class Incident(models.Model):
+	number                               = models.FloatField()
+	active                               = models.FloatField()
+	reassignment_count                   = models.FloatField()
+	reopen_count                         = models.FloatField()
+	sys_mod_count                        = models.FloatField()
+	made_sla                             = models.FloatField()
+	caller_id                            = models.FloatField()
+	opened_by                            = models.FloatField()
+	sys_created_by                       = models.FloatField()
+	sys_updated_by                       = models.FloatField()
+	location                             = models.FloatField()
+	category                             = models.FloatField()
+	subcategory                          = models.FloatField()
+	u_symptom                            = models.FloatField()
+	impact                               = models.FloatField()
+	urgency                              = models.FloatField()
+	priority                             = models.FloatField()
+	assignment_group                     = models.FloatField()
+	assigned_to                          = models.FloatField()
+	knowledge                            = models.FloatField()
+	u_priority_confirmation              = models.FloatField()
+	closed_code                          = models.FloatField()
+	resolved_by                          = models.FloatField()
+	opened_at_TS                         = models.FloatField()
+	sys_updated_at_TS                    = models.FloatField()
+	sys_created_at_TS                    = models.FloatField()
+	sys_updated_at_weekend               = models.FloatField()
+	incident_state_Active                = models.FloatField()
+	incident_state_Awaiting_Evidence     = models.FloatField()
+	incident_state_Awaiting_Problem      = models.FloatField()
+	incident_state_Awaiting_User_Info    = models.FloatField()
+	incident_state_Awaiting_Vendor       = models.FloatField()
+	incident_state_Closed                = models.FloatField()
+	incident_state_New                   = models.FloatField()
+	incident_state_Resolved              = models.FloatField()
+	resolved_at_TS                       = models.FloatField(null = True)
+	created 							 = models.DateTimeField(auto_now_add=True)
+
+class Meta:
+	ordering = ['created']
